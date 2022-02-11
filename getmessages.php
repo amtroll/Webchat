@@ -16,7 +16,7 @@ while($row = $run->fetch_array()):
 			<div class="name">
 			<?php 
 			$tsmp = $row['timestamp'];
-			echo $row['uname']. " " .$row['timestamp']; //username, timestamp
+			echo $row['uname']. " " .date("d-m-Y H:i", $row['timestamp']); //username, timestamp
 			?>
 			</div><br />
 			<div class="message">
@@ -36,7 +36,7 @@ while($row = $run->fetch_array()):
 		<div class="container_mine">
 			<div class="name">
 			<?php 
-			echo $row['uname']. " " .date("H:i", $row['timestamp']);
+			echo $row['uname']. " " .date("d-m-Y H:i", $row['timestamp']);//.date("H:i", $message[1])
 			?>
 			</div><br />
 			<div class="message">

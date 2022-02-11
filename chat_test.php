@@ -1,5 +1,6 @@
 <?php
 include_once 'config.php';
+//include_once 'functions.php';
 
 SESSION_START();
 if(isset($_POST["login"]))
@@ -25,9 +26,9 @@ if(isset($_POST["login"]))
 	$sql="SELECT * FROM user WHERE uname = '$uname'";
 	$run = $con->query($sql);
 	$row = $run->fetch_array();
+
 	
-//$row_cnt = $row->num_rows;
-	/*if($row->num_rows == null){
+	if($row == null){
 		echo "Benutzername existiert nicht. Versuchen Sie es bitte erneut.<br>";
 		?>
 		<link rel="stylesheet" href="chat.css">
@@ -36,7 +37,7 @@ if(isset($_POST["login"]))
 		</form>
 		<?php
 	}
-	else*/ if($row['pwd']==$pass) 
+	else if($row['pwd']==$pass) 
 	{
 		$_SESSION['user']=$username;
 		if(!isset($_COOKIE["chat"]))
@@ -61,8 +62,8 @@ if(isset($_COOKIE["chat"]))
 {
 	
 	?>
-	<?php require 'savemessages.php';?>
-	<?php require 'getmessages.php';?>
+	<?php require 'savemessages.php';//saveMsg($con);?>
+	<?php require 'getmessages.php';//getMsg($con); ?>
 	<html>
 	<head>
 	<title>M&M</title>
@@ -87,8 +88,15 @@ if(isset($_COOKIE["chat"]))
 				</p>
 				<p>
 					<textarea cols=30 rows=5 maxlength="500" name="message" required></textarea>
-					<button type="submit">senden</button>
+					<button type="submit">Senden</button>
 				</p>
+			</form>
+		</div>
+		<div class ="getmessages">
+			<form method="POST">
+					<input type="hidden" name="getmessages">
+					<button type="submit">Nachrichten laden</button>
+
 			</form>
 		</div>
 		</body>

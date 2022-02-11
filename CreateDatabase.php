@@ -1,10 +1,10 @@
 <?php
 $servername = "localhost";
-$username = "root";
+$db_username = "root";
 $password = ""; //Put your Password here
 $db_name = "chat"; //DatabaseName
 //Create connection
-$con = new mysqli($servername, $username, $password);
+$con = new mysqli($servername, $db_username, $password);
 
 
 //Check connection
@@ -26,7 +26,7 @@ else
 $con->close();
 
 
-$con = new mysqli($servername, $username, $password, $db_name);
+$con = new mysqli($servername, $db_username, $password, $db_name);
 
 if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
