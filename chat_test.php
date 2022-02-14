@@ -32,7 +32,7 @@ if(isset($_POST["login"]))
 		echo "Benutzername existiert nicht. Versuchen Sie es bitte erneut.<br>";
 		?>
 		<link rel="stylesheet" href="chat.css">
-		<form action="login_chat_test.php" method="post">
+		<form action="index.php" method="post">
 		<input type="submit" name="tologin" value="Zurück zum Login" id="login">
 		</form>
 		<?php
@@ -52,7 +52,7 @@ if(isset($_POST["login"]))
 		echo "Ihr Benutzername oder Passwort ist falsch. Versuchen Sie es bitte erneut.<br>";
 		?>
 		<link rel="stylesheet" href="chat.css">
-		<form action="login_chat_test.php" method="post">
+		<form action="index.php" method="post">
 		<input type="submit" name="tologin" value="Zurück zum Login" id="login">
 		</form>
 		<?php
@@ -108,7 +108,7 @@ else
 	echo "Sie sind noch nicht angemeldet.<br />";
 	?>
 	<link rel="stylesheet" href="chat.css">
-	<form action="login_chat_test.php" method="post">
+	<form action="index.php" method="post">
 	<input type="submit" name="tologin" value="Zum Login" id="login">
 	</form>
 	<?php

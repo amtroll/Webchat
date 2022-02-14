@@ -3,9 +3,15 @@
 	margin: 0 auto;
 }
 
+.getmessages{
+	overflow: auto;
+	margin: 0 auto;
+	padding: 1em;
+}
+
 button{
 	margin-top:-5em;
-        background-color:#22c322;
+    background-color:#22c322;
 }
 body{
 	background-color:#9398cc;

@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="chat.css">
 </head>
 <body>
-	<form action="login_chat_test.php" method="post">
+	<form action="index.php" method="post">
 		<p>
 		<label for="username">Benutzername:</label>
 		<input type="text" name="username" id="benutzername" required>
@@ -24,7 +24,7 @@
 	</form>
 	<p>Oder:</p>
 	<p>
-	<form action="login_chat_test.php" method="post">
+	<form action="index.php" method="post">
 		<input type="submit" value="Zum Login" id="login">
 	</form>
 	</p>
